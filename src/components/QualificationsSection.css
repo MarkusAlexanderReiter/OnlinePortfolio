@@ -1,0 +1,177 @@
+.qualifications-section {
+  background-color: var(--bg-secondary);
+}
+
+.qualifications-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.qualifications-column h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.qualification-item,
+.work-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.qualification-item:hover,
+.work-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.item-header h4 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.item-date {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.item-issuer,
+.item-company,
+.item-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.item-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.responsibilities-list li:before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.responsibilities-list li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-note {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.experience-note p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.experience-note strong {
+  color: var(--text-primary);
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+  .qualifications-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .qualifications-content {
+    gap: 2rem;
+  }
+  
+  .qualifications-column h3 {
+    font-size: 1.25rem;
+  }
+  
+  .qualification-item,
+  .work-item {
+    padding: 1.5rem;
+  }
+  
+  .item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .item-date {
+    align-self: flex-start;
+  }
+  
+  .experience-note {
+    padding: 1.5rem;
+  }
+  
+  .experience-note p {
+    font-size: 1rem;
+  }
+}
