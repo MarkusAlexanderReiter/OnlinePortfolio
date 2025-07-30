@@ -1,29 +1,32 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Server, Network, Code, Wrench } from 'lucide-react'
 import './AboutSection.css'
 
 const AboutSection = () => {
+  const { t } = useTranslation()
+  
   const skills = [
     {
       icon: <Server size={32} />,
-      title: 'System Administration',
-      description: 'Linux/Windows server management, virtualization, and infrastructure automation'
+      title: t('about.skills.systemAdmin.title'),
+      description: t('about.skills.systemAdmin.description')
     },
     {
       icon: <Network size={32} />,
-      title: 'Network Management',
-      description: 'Multi-site network design, VPN implementation, and security configuration'
+      title: t('about.skills.networkManagement.title'),
+      description: t('about.skills.networkManagement.description')
     },
     {
       icon: <Code size={32} />,
-      title: 'Development',
-      description: 'Automation scripts, monitoring solutions, and IoT project development'
+      title: t('about.skills.development.title'),
+      description: t('about.skills.development.description')
     },
     {
       icon: <Wrench size={32} />,
-      title: 'Problem Solving',
-      description: 'Troubleshooting complex issues and implementing innovative technical solutions'
+      title: t('about.skills.problemSolving.title'),
+      description: t('about.skills.problemSolving.description')
     }
   ]
 
@@ -58,8 +61,8 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2>About Me</h2>
-          <p>Passionate about technology with a hands-on approach to solving real-world problems</p>
+          <h2>{t('about.title')}</h2>
+          <p>{t('about.subtitle')}</p>
         </motion.div>
 
         <div className="about-content">
@@ -70,21 +73,15 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3>My Journey in IT</h3>
+            <h3>{t('about.journeyTitle')}</h3>
             <p>
-              I started my IT career at 18 in tech support, driven by curiosity and a passion for 
-              understanding how technology works. Over the years, I've worked my way up to become 
-              the sole network and system administrator for three mid-sized company locations.
+              {t('about.journey1')}
             </p>
             <p>
-              What sets me apart is my hands-on approach to learning and problem-solving. Rather than 
-              following traditional academic paths, I've built my expertise through real-world experience, 
-              personal projects, and continuous self-improvement.
+              {t('about.journey2')}
             </p>
             <p>
-              From building home server infrastructures to developing IoT solutions for everyday problems, 
-              I believe in learning by doing. This practical experience has given me a deep understanding 
-              of both the technical and business sides of IT operations.
+              {t('about.journey3')}
             </p>
           </motion.div>
 

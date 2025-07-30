@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react'
 import './ContactSection.css'
 
 const ContactSection = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,8 +75,8 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2>Get In Touch</h2>
-          <p>Ready to discuss opportunities and bring innovative solutions to your team</p>
+          <h2>{t('contact.title')}</h2>
+          <p>{t('contact.subtitle')}</p>
         </motion.div>
 
         <div className="contact-content">
@@ -85,11 +87,9 @@ const ContactSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3>Let's Connect</h3>
+            <h3>{t('contact.letsConnect')}</h3>
             <p>
-              I'm always interested in discussing new opportunities, challenging projects, 
-              and innovative solutions. Whether you're looking for a dedicated system administrator 
-              or someone who can bring fresh perspectives to your IT infrastructure, I'd love to hear from you.
+              {t('contact.description')}
             </p>
 
             <div className="contact-details">
@@ -109,7 +109,7 @@ const ContactSection = () => {
             </div>
 
             <div className="social-links">
-              <h4>Follow Me</h4>
+              <h4>{t('contact.followMe')}</h4>
               <div className="social-buttons">
                 {socialLinks.map((social, index) => (
                   <a
@@ -136,11 +136,11 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <form className="contact-form" onSubmit={handleSubmit}>
-              <h3>Send Me a Message</h3>
+              <h3>{t('contact.sendMessage')}</h3>
               
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="name">Name *</label>
+                  <label htmlFor="name">{t('contact.form.name')} *</label>
                   <input
                     type="text"
                     id="name"
@@ -152,7 +152,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email">{t('contact.form.email')} *</label>
                   <input
                     type="email"
                     id="email"
@@ -165,7 +165,7 @@ const ContactSection = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject">Subject *</label>
+                <label htmlFor="subject">{t('contact.form.subject')} *</label>
                 <input
                   type="text"
                   id="subject"
@@ -177,7 +177,7 @@ const ContactSection = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message *</label>
+                <label htmlFor="message">{t('contact.form.message')} *</label>
                 <textarea
                   id="message"
                   name="message"
@@ -190,7 +190,7 @@ const ContactSection = () => {
 
               <button type="submit" className="btn btn-primary submit-btn">
                 <Send size={18} />
-                Send Message
+                {t('contact.form.send')}
               </button>
             </form>
           </motion.div>

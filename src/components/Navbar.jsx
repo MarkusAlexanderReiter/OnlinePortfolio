@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import LanguageToggle from './LanguageToggle'
 import './Navbar.css'
 
 const Navbar = () => {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -35,21 +38,23 @@ const Navbar = () => {
 
           <div className={`nav-links ${isOpen ? 'open' : ''}`}>
             <button onClick={() => scrollToSection('home')} className="nav-link">
-              Home
+              {t('nav.home')}
             </button>
             <button onClick={() => scrollToSection('projects')} className="nav-link">
-              Projects
+              {t('nav.projects')}
             </button>
             <button onClick={() => scrollToSection('about')} className="nav-link">
-              About
+              {t('nav.about')}
             </button>
             <button onClick={() => scrollToSection('qualifications')} className="nav-link">
-              Qualifications
+              {t('nav.qualifications')}
             </button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">
-              Contact
+              {t('nav.contact')}
             </button>
           </div>
+
+          <LanguageToggle />
 
           <button
             className="nav-toggle"

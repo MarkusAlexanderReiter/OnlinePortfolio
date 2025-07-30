@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import './Footer.css'
 
 const Footer = () => {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -10,8 +12,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h4>Get In Touch</h4>
-            <p>Let's discuss opportunities and projects</p>
+            <h4>{t('footer.getInTouch')}</h4>
+            <p>{t('footer.description')}</p>
             <div className="social-links">
               <a href="mailto:your.email@example.com" aria-label="Email">
                 <Mail size={20} />
@@ -26,18 +28,18 @@ const Footer = () => {
           </div>
           
           <div className="footer-section">
-            <h4>Quick Links</h4>
+            <h4>{t('footer.quickLinks')}</h4>
             <div className="footer-links">
-              <a href="#projects">Projects</a>
-              <a href="#about">About</a>
-              <a href="#qualifications">Qualifications</a>
-              <a href="#contact">Contact</a>
+              <a href="#projects">{t('nav.projects')}</a>
+              <a href="#about">{t('nav.about')}</a>
+              <a href="#qualifications">{t('nav.qualifications')}</a>
+              <a href="#contact">{t('nav.contact')}</a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Portfolio. Built with React & passion for technology.</p>
+          <p>&copy; {currentYear} {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

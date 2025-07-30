@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "qualifications": "Qualifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "IT Professional & System Administrator",
+    "subtitle": "Transforming ideas into robust technical solutions with hands-on experience in network administration, system management, and innovative project development",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Showcasing real-world solutions and technical innovations",
+    "learnMore": "Learn More",
+    "moreProjects": "More projects and detailed case studies available upon request"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate about technology with a hands-on approach to solving real-world problems",
+    "journeyTitle": "My Journey in IT",
+    "journey1": "I started my IT career at 18 in tech support, driven by curiosity and a passion for understanding how technology works. Over the years, I've worked my way up to become the sole network and system administrator for three mid-sized company locations.",
+    "journey2": "What sets me apart is my hands-on approach to learning and problem-solving. Rather than following traditional academic paths, I've built my expertise through real-world experience, personal projects, and continuous self-improvement.",
+    "journey3": "From building home server infrastructures to developing IoT solutions for everyday problems, I believe in learning by doing. This practical experience has given me a deep understanding of both the technical and business sides of IT operations.",
+    "skills": {
+      "systemAdmin": {
+        "title": "System Administration",
+        "description": "Linux/Windows server management, virtualization, and infrastructure automation"
+      },
+      "networkManagement": {
+        "title": "Network Management",
+        "description": "Multi-site network design, VPN implementation, and security configuration"
+      },
+      "development": {
+        "title": "Development",
+        "description": "Automation scripts, monitoring solutions, and IoT project development"
+      },
+      "problemSolving": {
+        "title": "Problem Solving",
+        "description": "Troubleshooting complex issues and implementing innovative technical solutions"
+      }
+    }
+  },
+  "qualifications": {
+    "title": "Qualifications & Experience",
+    "subtitle": "Building expertise through hands-on experience and continuous learning",
+    "certifications": "Certifications",
+    "workExperience": "Work Experience",
+    "experienceNote": "My Approach: While my career path may seem non-traditional, each role has built upon the last, giving me a comprehensive understanding of IT from the ground up. I believe practical experience and continuous learning are just as valuable as formal education."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to discuss opportunities and bring innovative solutions to your team",
+    "letsConnect": "Let's Connect",
+    "description": "I'm always interested in discussing new opportunities, challenging projects, and innovative solutions. Whether you're looking for a dedicated system administrator or someone who can bring fresh perspectives to your IT infrastructure, I'd love to hear from you.",
+    "followMe": "Follow Me",
+    "sendMessage": "Send Me a Message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "getInTouch": "Get In Touch",
+    "description": "Let's discuss opportunities and projects",
+    "quickLinks": "Quick Links",
+    "copyright": "Portfolio. Built with React & passion for technology."
+  },
+  "projectDetail": {
+    "backToPortfolio": "Back to Portfolio",
+    "technologiesUsed": "Technologies Used",
+    "overview": "Project Overview",
+    "challenges": "Challenges",
+    "solutions": "Solutions",
+    "results": "Results & Impact",
+    "interestedTitle": "Interested in Similar Solutions?",
+    "interestedDescription": "Let's discuss how I can bring innovative technical solutions to your organization.",
+    "viewMoreProjects": "View More Projects",
+    "notFound": "Project Not Found",
+    "notFoundDescription": "The project you're looking for doesn't exist."
+  }
+}

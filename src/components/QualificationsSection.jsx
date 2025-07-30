@@ -1,9 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { Award, Calendar, MapPin, Building } from 'lucide-react'
 import './QualificationsSection.css'
 
 const QualificationsSection = () => {
+  const { t } = useTranslation()
+  
   const qualifications = [
     {
       title: 'WIFI Network Admin Certificate',
@@ -94,14 +97,14 @@ const QualificationsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2>Qualifications & Experience</h2>
-          <p>Building expertise through hands-on experience and continuous learning</p>
+          <h2>{t('qualifications.title')}</h2>
+          <p>{t('qualifications.subtitle')}</p>
         </motion.div>
 
         <div className="qualifications-content">
           {/* Certifications */}
           <div className="qualifications-column">
-            <h3><Award size={24} /> Certifications</h3>
+            <h3><Award size={24} /> {t('qualifications.certifications')}</h3>
             <motion.div 
               className="items-list"
               variants={containerVariants}
@@ -130,7 +133,7 @@ const QualificationsSection = () => {
 
           {/* Work Experience */}
           <div className="qualifications-column">
-            <h3><Building size={24} /> Work Experience</h3>
+            <h3><Building size={24} /> {t('qualifications.workExperience')}</h3>
             <motion.div 
               className="items-list"
               variants={containerVariants}
@@ -175,9 +178,7 @@ const QualificationsSection = () => {
           viewport={{ once: true }}
         >
           <p>
-            <strong>My Approach:</strong> While my career path may seem non-traditional, each role has built 
-            upon the last, giving me a comprehensive understanding of IT from the ground up. I believe 
-            practical experience and continuous learning are just as valuable as formal education.
+            <strong>{t('qualifications.experienceNote').split(':')[0]}:</strong> {t('qualifications.experienceNote').split(':')[1]?.trim()}
           </p>
         </motion.div>
       </div>

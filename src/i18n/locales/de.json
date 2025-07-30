@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "about": "Über mich",
+    "qualifications": "Qualifikationen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "IT-Profi & Systemadministrator",
+    "subtitle": "Verwandle Ideen in robuste technische Lösungen mit praktischer Erfahrung in Netzwerkadministration, Systemverwaltung und innovativer Projektentwicklung",
+    "viewWork": "Meine Arbeit ansehen",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Präsentation realer Lösungen und technischer Innovationen",
+    "learnMore": "Mehr erfahren",
+    "moreProjects": "Weitere Projekte und detaillierte Fallstudien auf Anfrage verfügbar"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Leidenschaftlich für Technologie mit einem praktischen Ansatz zur Lösung realer Probleme",
+    "journeyTitle": "Mein Weg in der IT",
+    "journey1": "Ich begann meine IT-Laufbahn mit 18 Jahren im technischen Support, angetrieben von Neugier und einer Leidenschaft für das Verständnis, wie Technologie funktioniert. Über die Jahre habe ich mich hochgearbeitet und bin nun der alleinige Netzwerk- und Systemadministrator für drei mittelgroße Unternehmensstandorte.",
+    "journey2": "Was mich auszeichnet, ist mein praktischer Ansatz beim Lernen und Problemlösen. Anstatt traditionelle akademische Wege zu verfolgen, habe ich meine Expertise durch reale Erfahrungen, persönliche Projekte und kontinuierliche Selbstverbesserung aufgebaut.",
+    "journey3": "Vom Aufbau von Heimserver-Infrastrukturen bis zur Entwicklung von IoT-Lösungen für alltägliche Probleme glaube ich an das Lernen durch Handeln. Diese praktische Erfahrung hat mir ein tiefes Verständnis sowohl der technischen als auch der geschäftlichen Seiten des IT-Betriebs vermittelt.",
+    "skills": {
+      "systemAdmin": {
+        "title": "Systemadministration",
+        "description": "Linux/Windows-Serververwaltung, Virtualisierung und Infrastruktur-Automatisierung"
+      },
+      "networkManagement": {
+        "title": "Netzwerkverwaltung",
+        "description": "Multi-Site-Netzwerkdesign, VPN-Implementierung und Sicherheitskonfiguration"
+      },
+      "development": {
+        "title": "Entwicklung",
+        "description": "Automatisierungsskripte, Überwachungslösungen und IoT-Projektentwicklung"
+      },
+      "problemSolving": {
+        "title": "Problemlösung",
+        "description": "Fehlerbehebung komplexer Probleme und Implementierung innovativer technischer Lösungen"
+      }
+    }
+  },
+  "qualifications": {
+    "title": "Qualifikationen & Erfahrung",
+    "subtitle": "Expertise durch praktische Erfahrung und kontinuierliches Lernen aufbauen",
+    "certifications": "Zertifizierungen",
+    "workExperience": "Berufserfahrung",
+    "experienceNote": "Mein Ansatz: Obwohl mein Karriereweg unkonventionell erscheinen mag, hat jede Rolle auf der letzten aufgebaut und mir ein umfassendes Verständnis der IT von Grund auf vermittelt. Ich glaube, dass praktische Erfahrung und kontinuierliches Lernen genauso wertvoll sind wie formale Bildung."
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Bereit, Möglichkeiten zu besprechen und innovative Lösungen in Ihr Team zu bringen",
+    "letsConnect": "Lassen Sie uns vernetzen",
+    "description": "Ich bin immer interessiert daran, neue Möglichkeiten, herausfordernde Projekte und innovative Lösungen zu besprechen. Ob Sie einen engagierten Systemadministrator suchen oder jemanden, der frische Perspektiven in Ihre IT-Infrastruktur bringen kann, ich würde gerne von Ihnen hören.",
+    "followMe": "Folgen Sie mir",
+    "sendMessage": "Nachricht senden",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden"
+    }
+  },
+  "footer": {
+    "getInTouch": "Kontakt aufnehmen",
+    "description": "Lassen Sie uns Möglichkeiten und Projekte besprechen",
+    "quickLinks": "Schnelllinks",
+    "copyright": "Portfolio. Erstellt mit React & Leidenschaft für Technologie."
+  },
+  "projectDetail": {
+    "backToPortfolio": "Zurück zum Portfolio",
+    "technologiesUsed": "Verwendete Technologien",
+    "overview": "Projektübersicht",
+    "challenges": "Herausforderungen",
+    "solutions": "Lösungen",
+    "results": "Ergebnisse & Auswirkungen",
+    "interestedTitle": "Interessiert an ähnlichen Lösungen?",
+    "interestedDescription": "Lassen Sie uns besprechen, wie ich innovative technische Lösungen in Ihre Organisation bringen kann.",
+    "viewMoreProjects": "Weitere Projekte ansehen",
+    "notFound": "Projekt nicht gefunden",
+    "notFoundDescription": "Das gesuchte Projekt existiert nicht."
+  }
+}

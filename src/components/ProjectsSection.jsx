@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { getFeaturedProjects } from '../data/projects'
 import './ProjectsSection.css'
 
 const ProjectsSection = () => {
+  const { t } = useTranslation()
   const featuredProjects = getFeaturedProjects()
 
   const containerVariants = {
@@ -39,8 +41,8 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2>Featured Projects</h2>
-          <p>Showcasing real-world solutions and technical innovations</p>
+          <h2>{t('projects.title')}</h2>
+          <p>{t('projects.subtitle')}</p>
         </motion.div>
 
         <motion.div 
@@ -88,7 +90,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <Link to={`/project/${project.id}`} className="project-cta">
-                  Learn More <ArrowRight size={16} />
+                  {t('projects.learnMore')} <ArrowRight size={16} />
                 </Link>
               </div>
             </motion.div>
@@ -102,7 +104,7 @@ const ProjectsSection = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p>More projects and detailed case studies available upon request</p>
+          <p>{t('projects.moreProjects')}</p>
         </motion.div>
       </div>
     </section>

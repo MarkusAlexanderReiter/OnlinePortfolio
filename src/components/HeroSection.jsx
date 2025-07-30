@@ -1,9 +1,12 @@
 import React from 'react'
 import { ChevronDown, Download, ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import './HeroSection.css'
 
 const HeroSection = () => {
+  const { t } = useTranslation()
+  
   const scrollToProjects = () => {
     const element = document.getElementById('projects')
     if (element) {
@@ -28,18 +31,17 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1>IT Professional & System Administrator</h1>
+            <h1>{t('hero.title')}</h1>
             <p className="hero-subtitle">
-              Transforming ideas into robust technical solutions with hands-on experience 
-              in network administration, system management, and innovative project development
+              {t('hero.subtitle')}
             </p>
             <div className="hero-buttons">
               <button onClick={scrollToProjects} className="btn btn-primary">
-                View My Work
+                {t('hero.viewWork')}
                 <ExternalLink size={18} />
               </button>
               <a href="#contact" className="btn btn-secondary">
-                Get In Touch
+                {t('hero.getInTouch')}
               </a>
             </div>
           </motion.div>

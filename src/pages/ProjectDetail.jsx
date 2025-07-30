@@ -1,11 +1,13 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from 'lucide-react'
 import { getProjectById } from '../data/projects'
 import './ProjectDetail.css'
 
 const ProjectDetail = () => {
+  const { t } = useTranslation()
   const { id } = useParams()
   const project = getProjectById(id)
 
@@ -14,11 +16,11 @@ const ProjectDetail = () => {
       <div className="project-detail-container">
         <div className="container">
           <div className="project-not-found">
-            <h1>Project Not Found</h1>
-            <p>The project you're looking for doesn't exist.</p>
+            <h1>{t('projectDetail.notFound')}</h1>
+            <p>{t('projectDetail.notFoundDescription')}</p>
             <Link to="/" className="btn btn-primary">
               <ArrowLeft size={18} />
-              Back to Home
+              {t('hero.viewWork')}
             </Link>
           </div>
         </div>
@@ -39,7 +41,7 @@ const ProjectDetail = () => {
           <div className="project-header">
             <Link to="/" className="back-link">
               <ArrowLeft size={20} />
-              Back to Portfolio
+              {t('projectDetail.backToPortfolio')}
             </Link>
             
             <div className="project-title-section">
@@ -63,7 +65,7 @@ const ProjectDetail = () => {
           {/* Project Meta */}
           <div className="project-meta">
             <div className="meta-section">
-              <h3><Tag size={20} /> Technologies Used</h3>
+              <h3><Tag size={20} /> {t('projectDetail.technologiesUsed')}</h3>
               <div className="technologies-list">
                 {project.technologies.map((tech, index) => (
                   <span key={index} className="tech-badge">{tech}</span>
@@ -75,12 +77,12 @@ const ProjectDetail = () => {
           {/* Project Details */}
           <div className="project-content">
             <div className="content-section">
-              <h2>Project Overview</h2>
+              <h2>{t('projectDetail.overview')}</h2>
               <p>{project.details.overview}</p>
             </div>
 
             <div className="content-section">
-              <h2>Challenges</h2>
+              <h2>{t('projectDetail.challenges')}</h2>
               <ul className="challenges-list">
                 {project.details.challenges.map((challenge, index) => (
                   <li key={index}>{challenge}</li>
@@ -89,7 +91,7 @@ const ProjectDetail = () => {
             </div>
 
             <div className="content-section">
-              <h2>Solutions</h2>
+              <h2>{t('projectDetail.solutions')}</h2>
               <ul className="solutions-list">
                 {project.details.solutions.map((solution, index) => (
                   <li key={index}>{solution}</li>
@@ -98,7 +100,7 @@ const ProjectDetail = () => {
             </div>
 
             <div className="content-section">
-              <h2>Results & Impact</h2>
+              <h2>{t('projectDetail.results')}</h2>
               <ul className="results-list">
                 {project.details.results.map((result, index) => (
                   <li key={index}>{result}</li>
@@ -109,14 +111,14 @@ const ProjectDetail = () => {
 
           {/* Call to Action */}
           <div className="project-cta">
-            <h3>Interested in Similar Solutions?</h3>
-            <p>Let's discuss how I can bring innovative technical solutions to your organization.</p>
+            <h3>{t('projectDetail.interestedTitle')}</h3>
+            <p>{t('projectDetail.interestedDescription')}</p>
             <div className="cta-buttons">
               <a href="#contact" className="btn btn-primary">
-                Get In Touch
+                {t('hero.getInTouch')}
               </a>
               <Link to="/" className="btn btn-secondary">
-                View More Projects
+                {t('projectDetail.viewMoreProjects')}
               </Link>
             </div>
           </div>
