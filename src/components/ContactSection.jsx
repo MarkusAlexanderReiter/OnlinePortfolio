@@ -72,7 +72,7 @@ const ContactSection = () => {
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
           <h2>{t('contact.title')}</h2>
@@ -84,7 +84,7 @@ const ContactSection = () => {
             className="contact-info"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             <h3>{t('contact.letsConnect')}</h3>
@@ -132,7 +132,7 @@ const ContactSection = () => {
             className="contact-form-container"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             <form className="contact-form" onSubmit={handleSubmit}>

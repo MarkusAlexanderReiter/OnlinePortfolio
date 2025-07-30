@@ -71,18 +71,17 @@ const QualificationsSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.05
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
-        duration: 0.5
+        duration: 0.2
       }
     }
   }
@@ -94,7 +93,7 @@ const QualificationsSection = () => {
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2>{t('qualifications.title')}</h2>
@@ -174,7 +173,7 @@ const QualificationsSection = () => {
           className="experience-note text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.1, duration: 0.2 }}
           viewport={{ once: true }}
         >
           <p>

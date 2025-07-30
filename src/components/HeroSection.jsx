@@ -10,7 +10,12 @@ const HeroSection = () => {
   const scrollToProjects = () => {
     const element = document.getElementById('projects')
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const navbarHeight = 80 // Account for navbar height
+      const elementPosition = element.offsetTop - navbarHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -29,7 +34,7 @@ const HeroSection = () => {
             className="hero-text"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             <h1>{t('hero.title')}</h1>
             <p className="hero-subtitle">
@@ -52,7 +57,7 @@ const HeroSection = () => {
           onClick={scrollToProjects}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
           whileHover={{ y: 5 }}
         >
           <ChevronDown size={24} />

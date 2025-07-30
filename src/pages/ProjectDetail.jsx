@@ -30,19 +30,21 @@ const ProjectDetail = () => {
 
   return (
     <div className="project-detail-container">
+      {/* Sticky Back Button */}
+      <Link to="/" className="back-link-sticky">
+        <ArrowLeft size={20} />
+        {t('projectDetail.backToPortfolio')}
+      </Link>
+      
       <div className="container">
         <motion.div 
           className="project-detail"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
         >
           {/* Header */}
           <div className="project-header">
-            <Link to="/" className="back-link">
-              <ArrowLeft size={20} />
-              {t('projectDetail.backToPortfolio')}
-            </Link>
             
             <div className="project-title-section">
               <div className="project-category-badge">{project.category}</div>
@@ -54,11 +56,9 @@ const ProjectDetail = () => {
           {/* Project Image */}
           <div className="project-image-container">
             <img 
-              src={project.image} 
+              src={`https://via.placeholder.com/800x400/667eea/ffffff?text=${encodeURIComponent(project.title)}`}
               alt={project.title}
-              onError={(e) => {
-                e.target.src = `https://via.placeholder.com/800x400/667eea/ffffff?text=${encodeURIComponent(project.title)}`
-              }}
+              loading="lazy"
             />
           </div>
 

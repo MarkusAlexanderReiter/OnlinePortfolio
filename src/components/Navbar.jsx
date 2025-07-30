@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import LanguageToggle from './LanguageToggle'
@@ -7,6 +7,8 @@ import './Navbar.css'
 
 const Navbar = () => {
   const { t } = useTranslation()
+  const location = useLocation()
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -21,9 +23,32 @@ const Navbar = () => {
   }, [])
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    // If we're not on the main page, navigate to main page first
+    if (location.pathname !== '/') {
+      navigate('/')
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const navbarHeight = 80 // Account for navbar height
+          const elementPosition = element.offsetTop - navbarHeight
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 100)
+    } else {
+      // We're already on the main page, just scroll
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const navbarHeight = 80 // Account for navbar height
+        const elementPosition = element.offsetTop - navbarHeight
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        })
+      }
     }
     setIsOpen(false)
   }

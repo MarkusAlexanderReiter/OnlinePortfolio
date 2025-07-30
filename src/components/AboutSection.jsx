@@ -41,12 +41,11 @@ const AboutSection = () => {
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.6
+        duration: 0.2
       }
     }
   }
@@ -58,7 +57,7 @@ const AboutSection = () => {
           className="section-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
           <h2>{t('about.title')}</h2>
@@ -70,7 +69,7 @@ const AboutSection = () => {
             className="about-text"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             <h3>{t('about.journeyTitle')}</h3>
@@ -98,7 +97,7 @@ const AboutSection = () => {
                 className="skill-card"
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.15 }}
               >
                 <div className="skill-icon">{skill.icon}</div>
                 <h4>{skill.title}</h4>

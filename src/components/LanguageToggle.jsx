@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import 'flag-icons/css/flag-icons.min.css'
 import './LanguageToggle.css'
 
 const LanguageToggle = () => {
@@ -9,23 +10,20 @@ const LanguageToggle = () => {
     i18n.changeLanguage(lang)
   }
 
+  const handleToggle = () => {
+    const newLang = i18n.language === 'de' ? 'en' : 'de'
+    toggleLanguage(newLang)
+  }
+
   return (
     <div className="language-toggle">
       <button
-        className={`flag-button ${i18n.language === 'de' ? 'active' : ''}`}
-        onClick={() => toggleLanguage('de')}
-        aria-label="Deutsch"
-        title="Deutsch"
+        className="flag-button"
+        onClick={handleToggle}
+        aria-label={i18n.language === 'de' ? 'Switch to English' : 'Switch to German'}
+        title={i18n.language === 'de' ? 'Switch to English' : 'Switch to German'}
       >
-        <span className="flag flag-de">🇩🇪</span>
-      </button>
-      <button
-        className={`flag-button ${i18n.language === 'en' ? 'active' : ''}`}
-        onClick={() => toggleLanguage('en')}
-        aria-label="English"
-        title="English"
-      >
-        <span className="flag flag-en">🇬🇧</span>
+        <span className={`fi fi-${i18n.language === 'de' ? 'de' : 'gb'} flag-icon`}></span>
       </button>
     </div>
   )
